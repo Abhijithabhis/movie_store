@@ -1,0 +1,28 @@
+.rating {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    float: right;
+    color: #ddd;
+}
+
+.rating label:before {
+    content: '★';
+    padding: 5px;
+    font-size: 80px;
+}
+
+.rating input:checked ~ label {
+    color: 	#8A2BE2;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #fc0;
+}
